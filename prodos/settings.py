@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('django-insecure-t47+4eb&%$b3mooi_6focvp5qqn4fsx0&5iz&+z2zidli)=&kp')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -129,4 +129,3 @@ LOGOUT_REDIRECT_URL = '/login/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
