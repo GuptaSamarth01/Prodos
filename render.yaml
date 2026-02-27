@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: prodos
+    env: python
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn prodos.wsgi"
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
